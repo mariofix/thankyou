@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "thankyou"
-version = "0.0.1"
+version = "0.0.2"
 description = "Python module to print Thank You in every known language."
 authors = ["Mario Hernandez <mariofix@pm.me>"]
 readme = "README.md"
@@ -11,12 +11,14 @@ classifiers=[
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 
 
 [build-system]
