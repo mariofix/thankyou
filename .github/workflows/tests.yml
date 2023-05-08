@@ -34,3 +34,6 @@ jobs:
       run: poetry run coverage run -m pytest
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2
+      continue-on-error: true
+      with:
+        flag-name: 'ubuntu-latest_x64_*'
