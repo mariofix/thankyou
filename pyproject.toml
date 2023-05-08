@@ -1,14 +1,24 @@
 [tool.poetry]
 name = "thankyou"
-version = "0.0.2"
-description = "Python module to print Thank You in every known language."
-authors = ["Mario Hernandez <mariofix@pm.me>"]
+version = "0.0.3"
+description = "Print \"Thank You\" in every known language"
+authors = [
+    "Mario Hernandez <mariofix@proton.me>"
+]
+license = "MIT"
 readme = "README.md"
 repository = "https://github.com/mariofix/thankyou"
+homepage = "https://mariofix.github.io/thankyou"
+keywords = [
+    "thanks", 
+    "library", 
+    "thank"
+]
+packages = [
+    { include = "thankyou" }
+]
 classifiers=[
     "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -18,9 +28,15 @@ classifiers=[
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+
+[tool.poetry.scripts]
+thanks = 'thankyou:give_thanks'
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
