@@ -27,12 +27,32 @@ classifiers=[
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
+[tool.poetry.build]
+generate-setup-file = true
+
 [tool.poetry.dependencies]
 python = "^3.8"
 
+[tool.poetry.group.dev]
+optional = true
+
+
 [tool.poetry.group.dev.dependencies]
-black = "^23.3.0"
-flake8 = "^6.0.0"
+black = "*"
+flake8 = "*"
+coverage = "*"
+pytest = "*"
+isort = "*"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra"
+testpaths = [
+    "thankyou",
+]
+python_files =[
+    "test*.py"
+]
 
 [tool.poetry.scripts]
 thanks = 'thankyou:give_thanks'
