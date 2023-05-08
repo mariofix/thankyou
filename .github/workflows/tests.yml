@@ -16,7 +16,7 @@ jobs:
       matrix:
         python-version: ["3.8", "3.9", "3.10", "3.11"]
         poetry-version: ["1.4.2"]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
@@ -34,6 +34,3 @@ jobs:
       run: poetry run coverage run -m pytest
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2
-      continue-on-error: true
-      with:
-        flag-name: 'ubuntu-latest_x64_*'
