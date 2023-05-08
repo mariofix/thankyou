@@ -3,7 +3,7 @@ name = "thankyou"
 version = "0.0.2"
 description = "Print \"Thank You\" in every known language"
 authors = [
-    "Mario Hernandez <yo@mariofix.com"
+    "Mario Hernandez <yo@mariofix.com>"
 ]
 license = "MIT"
 readme = "README.md"
