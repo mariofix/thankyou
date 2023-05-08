@@ -10,8 +10,8 @@ readme = "README.md"
 repository = "https://github.com/mariofix/thankyou"
 homepage = "https://mariofix.github.io/thankyou"
 keywords = [
-    "thanks", 
-    "library", 
+    "thanks",
+    "library",
     "thank"
 ]
 packages = [
@@ -39,10 +39,8 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 black = "*"
-flake8 = "*"
 coverage = "*"
 pytest = "*"
-isort = "*"
 
 [tool.pytest.ini_options]
 minversion = "6.0"

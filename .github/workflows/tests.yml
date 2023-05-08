@@ -30,9 +30,6 @@ jobs:
         poetry-version: ${{ matrix.poetry-version }}
     - name: Install Thank You
       run: poetry install --with dev
-    - uses: pre-commit/action@v3.0.0
-    - uses: pre-commit-ci/lite-action@v1.0.1
-      if: always()
     - name: Run Tests and coverage
       run: poetry run coverage run -m pytest
     - name: Coveralls GitHub Action
