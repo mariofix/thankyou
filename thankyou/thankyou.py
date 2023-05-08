@@ -1,7 +1,7 @@
 import secrets
 
 # Translated list thanks to ChatGPT
-thanks_array = [
+thanks_array: list = [
     ("Afghanistan", "تشکر"),
     ("Albania", "Faleminderit"),
     ("Algeria", "شكرا"),
@@ -265,6 +265,13 @@ thanks_array = [
 ]
 
 
-def give_thanks():
+def give_thanks(as_tuple=False) -> [str | tuple]:
+    """Returns translated "Thank You (Country)"
+
+    Selects one randomply from a list of tuples using secrets package
+    """
     thanks = secrets.choice(thanks_array)
-    return "{} ({})".format(thanks[1], thanks[0])
+    if not as_tuple:
+        return "{} ({})".format(thanks[1], thanks[0])
+    else:
+        return thanks
