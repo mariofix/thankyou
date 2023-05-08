@@ -5,7 +5,25 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "pip"
+    directory: "/"
     schedule:
       interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    assignees:
+      - "mariofix"
+    commit-message:
+      prefix: "poetry prod"
+      prefix-development: "poetry dev"
+      include: "scope"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    commit-message:
+      prefix: "actions prod"
+      prefix-development: "actions dev"
+      include: "scope"

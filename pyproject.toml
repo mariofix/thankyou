@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "thankyou"
-version = "0.0.2"
+version = "0.0.3"
 description = "Print \"Thank You\" in every known language"
 authors = [
     "Mario Hernandez <yo@mariofix.com>"
