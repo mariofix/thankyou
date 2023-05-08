@@ -1,3 +1,4 @@
+from typing import Union
 import secrets
 
 # Translated list thanks to ChatGPT
@@ -265,7 +266,7 @@ thanks_array: list = [
 ]
 
 
-def give_thanks(as_tuple=False) -> [str | tuple]:
+def give_thanks(as_tuple: bool = False) -> Union[str, tuple]:
     """Returns translated "Thank You (Country)"
 
     Selects one randomply from a list of tuples using secrets package
