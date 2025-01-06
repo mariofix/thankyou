@@ -21,7 +21,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
     - name: Set Up Poetry
-      uses: abatilo/actions-poetry@v3
+      uses: abatilo/actions-poetry@v4
     - name: Install Thank You
       run: poetry install --with dev
     - name: Build Thank You
